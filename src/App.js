@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import candidateDetails from "./data";
+import Category from "./Category";
+import MainCard from "./MainCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: "white", border: "6px groove black" }}>
+      <MainCard mainDetails={candidateDetails[0]} />
+      {candidateDetails[1].map((category) => {
+        return (
+          <Category
+            categoryDetails={{
+              title: category[0],
+              subCategoryDetails: category[1],
+              style: category[2],
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
