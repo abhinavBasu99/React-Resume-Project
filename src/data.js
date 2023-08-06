@@ -3,7 +3,7 @@ const mainDetails = {
   candidatePhoto: "/images/myPhoto.jfif",
   social: [
     {
-      logo: "/images/emailLogo.jpg",
+      logo: "../public/images/emailLogo.jpg",
       logoName: "Email Logo",
       detail: "abhinavbasu99@gmail.com",
     },
