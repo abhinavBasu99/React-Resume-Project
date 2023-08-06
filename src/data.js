@@ -3,7 +3,7 @@ const mainDetails = {
   candidatePhoto: "/images/myPhoto.jfif",
   social: [
     {
-      logo: "../public/images/emailLogo.jpg",
+      logo: "/images/emailLogo.jpg",
       logoName: "Email Logo",
       detail: "abhinavbasu99@gmail.com",
     },
@@ -151,7 +151,7 @@ const projectDetails = [
       title: "Calculator (Using String Methods)",
     },
     {
-      logo: "/images/projectLogos/guessNumberLogo.png",
+      logo: "/images/projectLogos/guessnumberLogo.png",
       logoName: "Guess Number Logo",
       title: "Guess My Number Game (D.O.M Manipulation)",
     },
@@ -319,6 +319,7 @@ const candidateDetails = [
     workDetails,
     interestDetails,
   ],
+  process.env.PUBLIC_URL,
 ];
 
 export default candidateDetails;

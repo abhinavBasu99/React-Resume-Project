@@ -4,7 +4,7 @@ function SubCategory(props) {
       <div style={{ display: "flex", justifyContent: "start", gap: "10px" }}>
         {props.subCategoryDetails.logo && (
           <img
-            src={props.subCategoryDetails.logo}
+            src={props.baseImageUrl + props.subCategoryDetails.logo}
             alt={props.subCategoryDetails.logoName}
             style={{ width: "50px" }}
           />

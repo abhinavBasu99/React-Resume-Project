@@ -5,7 +5,10 @@ import MainCard from "./MainCard";
 function App() {
   return (
     <div style={{ backgroundColor: "white", border: "6px groove black" }}>
-      <MainCard mainDetails={candidateDetails[0]} />
+      <MainCard
+        mainDetails={candidateDetails[0]}
+        baseImageUrl={candidateDetails[2]}
+      />
       {candidateDetails[1].map((category) => {
         return (
           <Category
@@ -14,6 +17,7 @@ function App() {
               subCategoryDetails: category[1],
               style: category[2],
             }}
+            baseImageUrl={candidateDetails[2]}
           />
         );
       })}

@@ -12,7 +12,7 @@ function MainCard(props) {
     >
       <div>
         <img
-          src={props.mainDetails.candidatePhoto}
+          src={props.baseImageUrl + props.mainDetails.candidatePhoto}
           alt="My Profile Pic"
           style={{ width: "180px", margin: "5px", borderRadius: "100px" }}
         />
@@ -27,7 +27,9 @@ function MainCard(props) {
         }}
       >
         {props.mainDetails.social.map((social) => {
-          return <SocialContact social={social} />;
+          return (
+            <SocialContact social={social} baseImageUrl={props.baseImageUrl} />
+          );
         })}
       </div>
     </div>

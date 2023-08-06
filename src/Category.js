@@ -10,6 +10,7 @@ function Category(props) {
       </h2>
       {props.categoryDetails.subCategoryDetails.map((subCategory) => (
         <SubCategory
+          baseImageUrl={props.baseImageUrl}
           subCategoryDetails={subCategory}
           style={props.categoryDetails.style.subCategoryStyle || {}}
         />
